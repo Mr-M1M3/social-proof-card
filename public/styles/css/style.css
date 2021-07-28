@@ -1,0 +1,138 @@
+*, *::before, *::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+img{
+    max-width: 100% !important;
+    max-height: 100% !important;
+}
+html{
+    height: auto;
+    min-height: 100vh;
+    font-size: 16px;
+    font-family: 'Spartan', sans-serif;
+}
+body{
+    height: inherit;
+    min-height: inherit;
+    background: url('../../../images/bg-pattern-top-desktop.svg') no-repeat scroll top left, url('../../../images/bg-pattern-bottom-desktop.svg') no-repeat scroll bottom right;
+}
+main{
+    height: auto;
+    min-height: 100vh;
+    padding: 0.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 'content star' 'card card';
+    gap: 2rem;
+}
+div.content{
+    grid-area: content;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start
+}
+div.content h1{
+    font-size: 3rem;
+    line-height: 3rem;
+    color: hsl(300, 43%, 22%);
+}
+div.content p{
+    /* font-size: 1.25rem; */
+    line-height: 1.5rem;
+    color: hsl(303, 10%, 53%);
+}
+div.star-reviews{
+    grid-area: star;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+div.star-review{
+    margin: 1rem 0 0 0;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.25rem;
+    min-width: 75%;
+    display: flex;
+    justify-content: space-between;
+    background-color: hsl(300, 24%, 96%);
+}
+div.reviewer{
+    text-align: right;
+    /* flex: 1; */
+}
+div.reviewer p{
+    font-weight: 700;
+    color:hsl(300, 43%, 22%)
+}
+div.star-review:nth-child(1){
+    position: relative;
+    right: 3rem;
+}
+div.star-review:nth-child(2){
+    position: relative;
+    left: 0;
+}
+div.star-review:nth-child(3){
+    position: relative;
+    left: 3rem;
+}
+div.card-reviews{
+    grid-area: card;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 0.8fr;
+    gap: 0.5rem;
+    justify-content: center;
+    align-content: center;
+}
+div.card{
+    font-size: 0.9rem;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    background-color: hsl(300, 43%, 22%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+div.card-header{
+    max-height: 30%;
+    display: flex;
+    justify-content: space-between;
+}
+div.avatar{
+    flex: 0.3;
+    max-height: 100%;
+}
+div.avatar img{
+    border-radius: 50%;
+}
+div.reviewer-info{
+    flex: 0.7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+div.reviewer-info span{
+    line-height: 1.5rem;
+}
+span.name{
+    font-weight: 700;
+    color: hsl(0, 0%, 100%);
+}
+span.profession{
+    color: hsl(333, 80%, 67%);
+}
+div.card-body{
+    margin-top: 1rem;
+    max-height: 70%;
+}
+div.card-body p{
+    line-height: 1.5rem;
+    color: hsl(0, 0%, 100%);
+}
